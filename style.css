@@ -1,0 +1,730 @@
+/* Reset and base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #e8f8f4;
+  color: #1a202c;
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: #1a202c;
+  cursor: pointer;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: #0ea43a;
+  text-decoration: underline;
+  outline: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1a202c;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 2.75rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.25s ease;
+}
+
+button:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Container limits & spacing */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Header and navigation */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+nav {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-left img.logo {
+  height: 40px;
+  width: 40px;
+  user-select: none;
+  pointer-events: none;
+  object-fit:contain;
+  margin-right: 1rem;
+}
+
+.nav-left span.site-title {
+  font-weight: 650;
+  font-size: 1rem;
+  user-select: none;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+
+}
+
+.nav-links a {
+  color: #1a202c;
+  user-select: none;
+  padding: 10px;
+}
+
+.nav-links a:hover {
+  text-decoration: none;
+  color: #1a202c;
+  border-radius: 100px;
+  box-shadow: 0 0 8px rgba(14, 164, 59, 0.723);
+  background-color: #0ea43a;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.nav-right a {
+  padding: 10px;
+}
+
+.nav-right a:hover {
+  box-shadow: 0 0 8px rgba(14, 164, 59, 0.723);
+  border-radius: 100px;
+  background-color: #0ea43a;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Main hero area container and layout */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 3rem 1rem;
+}
+
+.hero-left {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+}
+
+.hero-left p {
+  font-size: 1.125rem;
+  color: #4a5568;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+
+}
+
+.hero-links a {
+  color: #1a202c;
+  font-weight: 600;
+  user-select: none;
+  padding: 10px;
+}
+
+.hero-links a:hover {
+  text-decoration: none;
+  box-shadow: 0 0 8px rgba(14, 164, 59, 0.723);
+  border-radius: 100px;
+  background-color: #0ea43a;
+  color: #000000;
+  text-decoration: none;
+}
+
+/*why choose grid*/
+.why-choose-grid div svg {
+  width: 2rem;
+}
+
+/* Features section card (right side on medium and larger screens) */
+.features-section {
+  background-color: #0ea43a;
+  border-radius: 0.375rem;
+  max-width: 560px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 15px -3px rgb(14 164 58 / 0.3);
+  user-select: none;
+}
+
+.features-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+  background-color: #0ea43a;
+  flex-shrink: 0;
+}
+
+.live-market-label {
+  background-color: white;
+  color: #0ea43a;
+  padding: 0.125rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.625rem;
+  user-select: none;
+}
+
+.products-grid {
+  background: white;
+  padding: 1.25rem;
+  display: grid;
+  gap: 1rem;
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Individual product item container and layout */
+.product-item {
+  background-color: #f9fef9;
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+/* Icon container for check mark */
+.product-icon {
+  background-color: #d9f0d9;
+  color: #0ea43a;
+  font-weight: 700;
+  font-size: 0.75rem;
+  min-width: 28px;
+  min-height: 28px;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text info container for product */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  color: #1a202c;
+  flex: 1;
+}
+
+/* Subtitle under product name */
+.product-subtitle {
+  color: #718096;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  margin-top: 2px;
+}
+
+/* Row container for price and minimum quantity */
+.product-price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+
+/* Price styling */
+.product-price {
+  font-weight: 700;
+  color: #0ea43a;
+  font-size: 1rem;
+}
+
+/* Minimum quantity badge styling */
+.product-min {
+  background-color: #d9f0d9;
+  color: #0ea43a;
+  font-weight: 600;
+  font-size: 0.625rem;
+  border-radius: 9999px;
+  padding: 0.125rem 0.5rem;
+  user-select: none;
+}
+
+/* Link for viewing all products */
+.view-all-link {
+  text-align: right;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.75rem;
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+/* Sections below hero - container and styling */
+section.section-container {
+  padding: 4rem 1rem 4rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #d1d5db;
+}
+
+section.section-container:first-of-type {
+  border-top: none;
+}
+
+/* Section titles */
+section h2.section-title {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #1a202c;
+}
+
+/* Section subtitles */
+section p.section-subtitle {
+  color: #4a5568;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Why choose features grid */
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  color: #1a202c;
+  text-align: left;
+}
+
+.why-choose-grid div h3 {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.why-choose-grid div p {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin: 0;
+}
+
+/* How it works steps grid container */
+.steps-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 850px;
+  gap: 1.5rem 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* Each step item */
+.steps-grid li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 240px;
+  flex: 1 1 240px;
+  color: #1a202c;
+}
+
+/* Number circle for step */
+.step-number {
+  background-color: #0ea43a;
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.step-content p {
+  color: #4a5568;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Dashboard container grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #1a202c;
+}
+
+/* Dashboard card styling */
+.dashboard-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+.dashboard-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+/* Lists inside dashboard cards */
+.dashboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.dashboard-list li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.75rem 0;
+  align-items: center;
+}
+
+/* Order status text colors */
+.order-status {
+  font-weight: 700;
+}
+
+.status-delivered {
+  color: #16a34a;
+}
+
+.status-in-transit {
+  color: #ca8a04;
+}
+
+.status-pending {
+  color: #dc2626;
+}
+
+/* Testimonials container */
+.testimonials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #1a202c;
+}
+
+/* Individual testimonial card */
+.testimonial {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+}
+
+.testimonial-header {
+  z-index: 0;
+  display: flex
+;
+  align-items: center;
+  position: relative;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Avatar circle for testimonial */
+.testimonial-avatar {
+  background-color: #0ea43a;
+  color: white;
+  font-weight: 700;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin: 0;
+  color: #1a202c;
+}
+
+.testimonial-role {
+  font-size: 0.875rem;
+  color: #718096;
+  margin: 0;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #4a5568;
+  margin: 0;
+}
+
+.testimonial-vendor-since {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: #718096;
+  font-weight: 600;
+  user-select: none;
+}
+
+/* Pricing grid container */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #1a202c;
+}
+
+/* Pricing card styles */
+.pricing-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+  user-select: none;
+}
+
+.pricing-card.pro {
+  border: 2px solid #0ea43a;
+}
+
+.pricing-card h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-description {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  flex-grow: 0;
+}
+
+.pricing-price {
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #0ea43a;
+  margin-bottom: 1.5rem;
+  flex-grow: 0;
+}
+
+.pricing-price span {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #718096;
+  margin-left: 0.25rem;
+}
+
+.pricing-features {
+  color: #4a5568;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.pricing-features li {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-button {
+  background-color: #0ea43a;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.pricing-button:hover,
+.pricing-button:focus-visible {
+  background-color: #0c8a2e;
+  outline: none;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+    gap: 4rem;
+    padding: 4rem 1rem;
+  }
+
+  .hero-left {
+    flex: 1 1 50%;
+    max-width: none;
+  }
+
+  .features-section {
+    flex: 1 1 50%;
+    max-width: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+  }
+
+  .nav-right {
+    display: flex !important;
+  }
+
+  /* Dashboard 2-column */
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 2rem;
+  }
+
+  /* Pricing grid 3-columns */
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+
+  .nav-links,
+  .nav-right {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2.section-title {
+    font-size: 1.75rem;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+}
