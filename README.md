@@ -8,7 +8,7 @@ This is the frontend portion of the project, built using **HTML** and **CSS**, h
 
 ### 🌐 Live Demo
 
-👉 [[View Fresh Connect in your browser]](https://tusharmgs.github.io/Fresh_Connect/)
+👉 [[View Fresh Connect in your browser]](https://tusharmgs.github.io/Fresh_Connect)
 ---
 
 ## 🎯 Purpose
