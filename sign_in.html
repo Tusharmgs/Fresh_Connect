@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Sign In</title>
+ <link rel="stylesheet" href="/sign_in.css">
+ <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="container" role="main" aria-label="Sign in form">
+    <h1>Sign In</h1>
+    <form>
+      <label for="email">Email Address
+        <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+      </label>
+      <label for="password">Password
+        <input id="password" name="password" type="password" placeholder="Enter your password" required autocomplete="current-password" />
+      </label>
+      <button type="submit" class="primary-btn">Sign In</button>
+    </form>
+    <div class="btn-group">
+      <button type="button" class="secondary-btn" aria-label="Create a new account">Create New Account</button>
+      <div class="guest-label">Continue as</div>
+      <div class="guest-btns" role="group" aria-label="Guest login options">
+        <a href="/buyer.html" class="guest-btn">Guest Buyer</a>
+        <a href="/vendor.html" class="guest-btn">Guest Vendor</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
