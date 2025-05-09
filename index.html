@@ -8,7 +8,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
-<link rel="icon" href="/Fresh_Connect/assets/favicon.ico type="image/x-icon""/>
+  <link rel="icon" href="Fresh_Connect/assets/images/favicon.ico" />
 </head>
 
 <body>
@@ -16,8 +16,7 @@
   <header>
     <nav class="container" aria-label="Primary navigation">
       <div class="nav-left">
-        <img src="/Fresh_Connect/assets/favicon.ico"
-          alt="FreshConnect logo" class="logo"/>
+        <img src="Fresh_Connect/assets/images/favicon.ico" alt="FreshConnect logo" class="logo" />
         <span class="site-title" aria-label="FreshConnect">FreshConnect</span>
         <!-- Navigation Links -->
 
@@ -33,9 +32,9 @@
       </div>
       <!-- Right side login/signup -->
       <div class="nav-right">
-        <a href="#">Log In</a>
-        <a href="#">Sign Up Free</a>
+        <a href="#">Sign In</a>
       </div>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
     </nav>
   </header>
 
@@ -113,6 +112,32 @@
       <div class="view-all-link" tabindex="0" role="link" aria-label="View all products">View all products →</div>
     </section>
   </main>
+
+  <!-- About Us Section -->
+  <section class="section-container">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-container">
+      <div class="about-text">
+        <p>
+          This project is designed to connect local fruit and vegetable vendors with high-volume buyers through a
+          simplified and organized platform. Many small-scale sellers operate in unstructured settings, which often
+          leads to inefficiencies, inconsistent demand, and product wastage.
+        </p>
+        <p>
+          Our goal is to streamline this supply chain by offering a digital bridge that facilitates bulk procurement in
+          a more transparent and reliable manner.
+        </p>
+        <p>
+          By enabling easier access to bulk orders, the platform reduces logistical confusion, supports better inventory
+          planning, and minimizes food wastage. It empowers local vendors with better income stability while helping
+          buyers ensure a steady supply of fresh produce at competitive prices.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="/images/about_new.jpg" alt="Fresh produce distribution">
+      </div>
+    </div>
+  </section>
 
   <!-- Why Choose Section -->
   <section class="section-container" id="features-section-2" aria-label="Why Choose FreshConnect">
@@ -468,6 +493,7 @@
       </article>
     </div>
   </section>
+  <script src="Fresh_Connect/script.js"></script>
 </body>
 
 </html>
