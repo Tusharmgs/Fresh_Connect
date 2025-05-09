@@ -10,6 +10,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: #e8f8f4;
   color: #1a202c;
+
   line-height: 1.5;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -82,6 +83,7 @@ button:focus-visible {
 /* Container limits & spacing */
 .container {
   max-width: 1200px;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
@@ -164,6 +166,118 @@ nav {
   color: #000000;
   text-decoration: none;
 }
+
+/*Hamburger Menu*/
+/* Base nav layout */
+nav.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.site-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Hamburger hidden above 960px */
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  color: #0ea43a;
+}
+
+/* Responsive styles below 960px */
+@media (max-width: 960px) {
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-links,
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 1rem;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  /* Show when active class is added */
+  .nav-links.active,
+  .nav-right.active {
+    display: flex;
+    position: absolute;
+    top: 8rem;
+  }
+  .nav-links.active {
+    right: 0.5rem;
+    margin: 0;
+    width: 10rem;
+    border-bottom: 2px solid #0ea43a;
+    border-left: 2px solid #0ea43a;
+    border-right: 2px solid #0ea43a;
+    display: flex;
+    position: absolute;
+    padding-bottom: 1rem;
+    top: 8rem;
+  }
+  .nav-right.active {
+    padding-top: 1rem;
+            top: 15rem;
+    padding-bottom: 0;
+    display: flex;
+    width: auto;
+    gap: 0;
+    position: absolute;
+    right: 0;
+    top: 4.5rem;
+    width: 10rem;
+    border-top: 2px solid #0ea43a;
+    border-left: 2px solid #0ea43a;
+    border-right: 2px solid #0ea43a;
+    right: 0.5rem;
+    margin: 0;
+    
+  }
+}
+
 
 /* Main hero area container and layout */
 main {
@@ -351,15 +465,12 @@ main {
 /* Sections below hero - container and styling */
 section.section-container {
   padding: 4rem 1rem 4rem;
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   border-top: 1px solid #d1d5db;
 }
 
-section.section-container:first-of-type {
-  border-top: none;
-}
 
 /* Section titles */
 section h2.section-title {
@@ -380,6 +491,76 @@ section p.section-subtitle {
   margin-left: auto;
   margin-right: auto;
 }
+
+/*--About Us Section*/
+
+.about-section {
+  padding: 60px 20px;
+  background-color: #e8f8f4;
+}
+
+.about-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  flex: 1 1 40%;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ✅ Responsive design below 768px */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text, .about-image {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+  }
+}
+
+
 
 /* Why choose features grid */
 .why-choose-grid {
@@ -670,12 +851,15 @@ section p.section-subtitle {
 }
 
 /* Responsive adjustments */
-@media (min-width: 768px) {
+@media (min-width: 835px) {
   main {
     flex-direction: row;
+    align-items: center;
     gap: 4rem;
     padding: 4rem 1rem;
   }
+
+
 
   .hero-left {
     flex: 1 1 50%;
@@ -687,13 +871,7 @@ section p.section-subtitle {
     max-width: none;
   }
 
-  .nav-links {
-    display: flex !important;
-  }
 
-  .nav-right {
-    display: flex !important;
-  }
 
   /* Dashboard 2-column */
   .dashboard-grid {
@@ -706,14 +884,8 @@ section p.section-subtitle {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/*-----------------------------------------------------*/
 
-@media (max-width: 767px) {
-
-  .nav-links,
-  .nav-right {
-    display: none;
-  }
-}
 
 @media (max-width: 400px) {
   h1 {
