@@ -35,8 +35,8 @@ fresh-connect/
 To try this project locally:
 
 bash
-git clone https://tusharmgs.github.io/fresh_connect.git
-cd fresh-connect
+git clone https://tusharmgs.github.io/Fresh_Connect.git
+cd Fresh-Connect
 
 Then open FreshConnect.html in your browser.
 
