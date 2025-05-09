@@ -8,8 +8,7 @@ This is the frontend portion of the project, built using **HTML** and **CSS**, h
 
 ### 🌐 Live Demo
 
-👉 [View Fresh Connect in your browser](https://tusharmgs.github.io/fresh-connect/)  
-
+👉 [[View Fresh Connect in your browser]([https://tusharmgs.github.io/Fresh_Connect/])  
 ---
 
 ## 🎯 Purpose
@@ -36,7 +35,7 @@ fresh-connect/
 To try this project locally:
 
 bash
-git clone https://github.com/tusharmgs/fresh-connect.git
+git clone https://tusharmgs.github.io/fresh-connect.git
 cd fresh-connect
 
 Then open FreshConnect.html in your browser.
