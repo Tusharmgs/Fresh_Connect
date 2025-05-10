@@ -132,7 +132,7 @@
     /* Hero Section */
     .hero {
       max-width: 1120px;
-      margin: 8rem auto;
+      margin: 4rem auto;
       padding: 0 1rem;
       display: flex;
       flex-direction: column;
