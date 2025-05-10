@@ -56,10 +56,15 @@
       text-decoration: none;
       color: inherit;
       transition: text-decoration 0.2s ease;
+       padding:0.5rem;
     }
 
     .nav-links a:hover {
-      text-decoration: underline;
+      text-decoration: none;
+  color: #1a202c;
+  border-radius: 100px;
+  box-shadow: 0 0 8px rgba(14, 164, 59, 0.723);
+  background-color: #0ea43a;
     }
 
     .hamburger {
