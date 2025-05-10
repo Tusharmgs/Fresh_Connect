@@ -47,11 +47,16 @@
     .nav-links a {
       text-decoration: none;
       color: inherit;
+       padding:0.5rem;
       
     }
 
     .nav-links a:hover {
-      text-decoration: underline;
+      text-decoration: none;
+  color: #1a202c;
+  border-radius: 100px;
+  box-shadow: 0 0 8px rgba(14, 164, 59, 0.723);
+  background-color: #0ea43a;
     }
 
     .hamburger {
