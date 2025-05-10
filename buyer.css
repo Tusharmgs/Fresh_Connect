@@ -91,10 +91,13 @@
     }
 
     #dropdown-menu a {
-      padding: 0.5rem 0.75rem;
-      border-radius: 4px;
-      text-decoration: none;
-      color: #1e293b;
+      display: block;
+     padding: 0.5rem 1rem;
+     font-weight: 500;
+     font-size: 0.875rem;
+       color: #1e293b;
+       text-decoration: none;
+        transition: background-color 0.2s ease;
     }
 
     #dropdown-menu a:hover {
